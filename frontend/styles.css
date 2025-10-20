@@ -1,0 +1,110 @@
+/* styles.css */
+
+/* --- General and Font Styles --- */
+body {
+    /* Use a clean, modern system font */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    /* A very light, professional background color */
+    background-color: #f4f7f6;
+    
+    /* Dark text color for high readability */
+    color: #333;
+    
+    /* Center the content vertically and horizontally on the page */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Add some padding on smaller screens */
+    box-sizing: border-box;
+}
+
+/* --- Main Content Cards --- */
+/* This styles both the top (input) and bottom (result) divs */
+body > div {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* A subtle shadow for depth */
+    width: 100%;
+    max-width: 550px; /* Limit the width on larger screens */
+    text-align: center;
+}
+
+/* Add spacing between the two main divs */
+.input-box {
+    margin-bottom: 25px;
+}
+
+/* --- Typography --- */
+/* This targets "Enter the really big url" and "here is the short url..." */
+div > div > div:first-child {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #212529; /* A slightly softer black */
+}
+
+/* --- URL Input Field --- */
+#url-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Add a blue glow when the user clicks on the input field */
+#url-input:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+/* --- Shorten Button --- */
+#shorten-btn {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #007BFF; /* A professional, vibrant blue */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Darken the button slightly on hover for user feedback */
+#shorten-btn:hover {
+    background-color: #0056b3;
+}
+
+/* --- Result Display Box --- */
+#result-box {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #e9ecef; /* A light, distinct background */
+    border-radius: 8px;
+    min-height: 25px; /* Ensures the box is visible even when empty */
+    word-wrap: break-word; /* Prevents long URLs from overflowing */
+    font-family: 'Courier New', Courier, monospace; /* A monospaced font for URLs */
+    font-size: 1.1rem;
+}
+
+/* Styles the link that your JavaScript will create */
+#result-box a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#result-box a:hover {
+    text-decoration: underline;
+}
