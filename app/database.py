@@ -1,7 +1,7 @@
 from sqlmodel import SQLModel , create_engine , Session
 from .config import settings
-DATABASE_URL = f"postgresql://{settings.DATABASE_USER_NAME}:{settings.DATABASE_PASSWORD}@{settings.DATABASE_HOST}/{settings.DATABASE_NAME}"
-
+#DATABASE_URL = f"postgresql://{settings.DATABASE_USER_NAME}:{settings.DATABASE_PASSWORD}@{settings.DATABASE_HOST}/{settings.DATABASE_NAME}"
+DATABASE_URL = f"{settings.DATABASE_URL}"
 engine = create_engine(DATABASE_URL,echo=True)
 
 def create_db_and_tables():
