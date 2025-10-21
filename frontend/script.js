@@ -11,12 +11,12 @@ const shortenUrl = async () => {
     }
 
     try {
-        const response = await fetch('https://short-url-9hv8.onrender.com/convert', {
+        const response = await fetch('http://127.0.0.1:8000/convert', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            
+
             body: JSON.stringify({ long_url: urlInput.value }),
         });
         if (!response.ok) {

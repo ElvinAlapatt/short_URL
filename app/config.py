@@ -1,10 +1,8 @@
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    DATABASE_USER_NAME : str
-    DATABASE_PASSWORD : str 
-    DATABASE_HOST : str
-    DATABASE_NAME : str
+    FRONTEND_URL : str
+    BACKEND_URL : str
     DATABASE_URL : str
 
     class Config:
